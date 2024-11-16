@@ -1,4 +1,4 @@
-package com.challenge_kotlin.labs08_idnp_roomdatabase.model.database
+package com.challenge_kotlin.labs08_idnp_roomdatabase.database.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
