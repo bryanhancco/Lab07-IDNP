@@ -8,13 +8,13 @@ import com.challenge_kotlin.labs08_idnp_roomdatabase.database.dao.ComentarioDAO
 import com.challenge_kotlin.labs08_idnp_roomdatabase.database.dao.FavoritoDAO
 import com.challenge_kotlin.labs08_idnp_roomdatabase.database.dao.SitioTuristicoDAO
 import com.challenge_kotlin.labs08_idnp_roomdatabase.database.dao.UsuarioDAO
-import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.Comentario
-import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.Favorito
+import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.ComentarioModel
+import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.FavoritoModel
 import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.SitioTuristico
-import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.Usuario
+import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.UsuarioModel
 
 
-@Database(entities = [Comentario::class, Usuario::class, Favorito::class, SitioTuristico::class], version = 1)
+@Database(entities = [ComentarioModel::class, UsuarioModel::class, FavoritoModel::class, SitioTuristico::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun comentarioDAO(): ComentarioDAO
     abstract fun usuarioDAO(): UsuarioDAO

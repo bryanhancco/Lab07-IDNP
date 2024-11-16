@@ -9,9 +9,9 @@ import androidx.room.ColumnInfo
     tableName = "Favoritos",
     foreignKeys = [
         ForeignKey(
-            entity = Usuario::class,
-            parentColumns = ["usuario_id"],
-            childColumns = ["usuario_id"],
+            entity = UsuarioModel::class,
+            parentColumns = ["username"],
+            childColumns = ["username"],
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
@@ -22,13 +22,13 @@ import androidx.room.ColumnInfo
         )
     ]
 )
-data class Favorito(
+data class FavoritoModel(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "favorito_id")
     val favoritoId: Long = 0L,
 
-    @ColumnInfo(name = "usuario_id")
-    val usuarioId: Long,
+    @ColumnInfo(name = "username")
+    val username: String,
 
     @ColumnInfo(name = "sitio_id")
     val sitioId: Long

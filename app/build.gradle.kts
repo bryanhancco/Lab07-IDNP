@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.challenge_kotlin.labs08_idnp_roomdatabase"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.challenge_kotlin.labs08_idnp_roomdatabase"
-        minSdk = 25
-        targetSdk = 34
+        minSdk = 33
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -45,10 +45,10 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     // Room Dependencies
-    implementation("androidx.room:room-runtime:2.6.1")
-    ksp("androidx.room:room-compiler:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    androidTestImplementation("androidx.room:room-testing:2.6.1")
+    implementation("androidx.room:room-runtime:2.5.1")
+    ksp("androidx.room:room-compiler:2.5.1")
+    implementation("androidx.room:room-ktx:2.5.1")
+    androidTestImplementation("androidx.room:room-testing:2.5.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

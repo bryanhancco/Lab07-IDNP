@@ -4,15 +4,14 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
 import androidx.room.ColumnInfo
-import java.util.*
 
 @Entity(
     tableName = "Comentarios",
     foreignKeys = [
         ForeignKey(
-            entity = Usuario::class,
-            parentColumns = ["name"],
-            childColumns = ["usuario_nombre"],
+            entity = UsuarioModel::class,
+            parentColumns = ["username"],
+            childColumns = ["username"],
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
@@ -23,7 +22,7 @@ import java.util.*
         )
     ]
 )
-data class Comentario(
+data class ComentarioModel(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "comentario_id")
     val comentarioId: Long = 0L,
@@ -31,14 +30,11 @@ data class Comentario(
     @ColumnInfo(name = "comentario")
     val comentario: String,
 
-    @ColumnInfo(name = "usuario_nombre")
-    val usuarioNombre: String,
+    @ColumnInfo(name = "username")
+    val username: String,
 
     @ColumnInfo(name = "sitio_id")
     val sitioId: Long,
-
-    @ColumnInfo(name = "fecha")
-    val fecha: Date,
 
     @ColumnInfo(name = "num_likes")
     val numLikes: Long

@@ -5,8 +5,7 @@ import androidx.room.PrimaryKey
 import androidx.room.ColumnInfo
 
 @Entity(tableName = "Usuario")
-data class Usuario(
-    @PrimaryKey
+data class UsuarioModel(
     @ColumnInfo(name = "usuario_id")
     val usuarioId: Long,
 
@@ -16,6 +15,7 @@ data class Usuario(
     @ColumnInfo(name = "password")
     val password: String,
 
+    @PrimaryKey
     @ColumnInfo(name = "username")
     val username: String
 )
