@@ -8,6 +8,8 @@ import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.FavoritoMode
 
 @Dao
 interface FavoritoDAO {
+    @Query("SELECT * FROM Favoritos")
+    suspend fun getAllFavoritos(): List<FavoritoModel>
 
     @Insert
     suspend fun insertFavorito(favoritoModel: FavoritoModel)

@@ -9,6 +9,9 @@ import com.challenge_kotlin.labs08_idnp_roomdatabase.database.model.ComentarioMo
 
 @Dao
 interface ComentarioDAO {
+    @Query("SELECT * FROM Comentarios")
+    suspend fun getAllComentarios(): List<ComentarioModel>
+
     @Insert
     suspend fun insertComentario(comentarioModel: ComentarioModel)
 

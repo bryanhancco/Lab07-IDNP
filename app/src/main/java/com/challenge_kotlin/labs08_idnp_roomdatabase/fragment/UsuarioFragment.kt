@@ -112,7 +112,6 @@ class UsuarioFragment : Fragment(R.layout.fragment_user) {
         }
 
         builder.setNegativeButton("Cancelar", null)
-
         builder.show()
     }
 

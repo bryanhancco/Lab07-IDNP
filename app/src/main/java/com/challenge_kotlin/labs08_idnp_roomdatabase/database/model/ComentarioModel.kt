@@ -15,7 +15,7 @@ import androidx.room.ColumnInfo
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
-            entity = SitioTuristico::class,
+            entity = Sitio_TuristicoModel::class,
             parentColumns = ["sitio_id"],
             childColumns = ["sitio_id"],
             onDelete = ForeignKey.CASCADE
@@ -39,3 +39,6 @@ data class ComentarioModel(
     @ColumnInfo(name = "num_likes")
     val numLikes: Long
 )
+
+
+

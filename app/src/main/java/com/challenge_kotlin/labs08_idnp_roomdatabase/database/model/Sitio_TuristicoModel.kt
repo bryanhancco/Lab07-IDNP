@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import androidx.room.ColumnInfo
 
 @Entity(tableName = "Sitio_Turistico")
-data class SitioTuristico(
+data class Sitio_TuristicoModel(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "sitio_id")
     val sitioId: Long = 0L,
